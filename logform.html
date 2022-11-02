@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+	</title>
+	<link rel="stylesheet" type="text/css" href="logform.css">
+</head>
+<body>
+<section class="backimg">
+	<div class="cdiv">
+     <img src="download2-removebg-preview.png" id="pic">	
+     <form  class="class"  onsubmit="return valid()">
+     	<div>
+     		<label>USERNAME</label>
+     	<input type="text" name="" placeholder="Enter Username" autocomplete="off"   id="user">
+     	<span id="iduse" class="spantag"></span>
+     	</div><br>
+     	<div>
+     		<label>PASSWORD</label>
+     	<input type="password" name=""  placeholder="Enter Password" autocomplete="off" autofocus id="pass">
+     		<span id="idpass" class="spantag"></span>
+     	</div><br>
+     	<div class="sub">
+     		<input type="submit" value="SUBMIT" name="" class="andi"><span><button class="red"> RESET </button></span>
+     	</div>
+     	
+     </form>	
+	</div>
+</section>
+<script>
+        function valid(){
+            var user=document.getElementById('user').value;
+            var pass=document.getElementById('pass').value;
+            if(user=="")
+            {
+                document.getElementById("iduse").innerHTML="**please fill the username field...";
+                return false;
+                        }
+              if ((user.length<=2)||(user.length>=20)){
+              document.getElementById("iduse").innerHTML="**username length is too short...";
+                return false;
+              }
+                
+           
+               
+
+             if(pass=="")
+            {
+                document.getElementById("idpass").innerHTML="**please fill the password field...";
+                return false;
+                        }
+
+             if(pass.length<=5)
+            {
+                document.getElementById("idpass").innerHTML="**password is not much strog...";
+                return false;
+                        }
+               else{
+               	alert("Login successfull ")
+               	return true;
+               }        
+        }
+    </script>
+</body>
+</html>

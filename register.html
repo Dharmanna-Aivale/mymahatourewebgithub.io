@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+	<section class="backimg">
+	<div class="cdiv">
+<h1>register now!</h1>
+<hr><br>
+<br>
+<form class="formee" onsubmit="return validations()">
+	<div>
+		<label>f-name</label>
+		<input class="pad1" type="text" name=" " placeholder="inter first name " id="fname">
+		<span class="error" style=" color: red; font-weight: bold; text-transform: uppercase;" id="efname"> </span>
+	</div><br><br>
+		<div>
+		<label>l-name</label>
+		<input class="pad2" type="text" name="" placeholder="Enter last name" id="lname">
+		<span class="error" style=" color: red; font-weight: bold; text-transform: uppercase;" id="elname"> </span>
+	</div><br><br>
+	<div>
+		<label>phone</label>
+		<input class="pad3" type="number" name="" placeholder="Enter phone number " id="phone">
+		<span class="error" style=" color: red; font-weight: bold; text-transform: uppercase;" id="ephone"> </span>
+	</div><br><br>
+	<div>
+		<label>email</label>
+		<input class="pad4" type="text" name="" placeholder="Enter email id" id="email">
+		<span class="error" style=" color: red; font-weight: bold; text-transform: uppercase;" id="eemail"> </span>
+	</div><br><br>
+		<div>
+		<label>password</label>
+		<input class="pad5" type="password" name="" placeholder="Enter Password " id="password">
+		<span class="error" style=" color: red; font-weight: bold; text-transform: uppercase;" id="epassword"> </span>
+	</div><br><br><br>
+		<div>
+		<label>conform password</label>
+		<input class="pad6" type="password" name="" placeholder="Enter conform password" id="conformpassword" >
+		<span class="error" style=" color: red; font-weight: bold; text-transform: uppercase;" id="econformpassword"> </span>
+	</div><br>
+	<input type="submit" name="" value="submit" style=" width: 100px; background-color: green; border-radius: 5px; color: white;"> <span> 	<input type="submit" name="" value="reset" style=" width: 100px; background-color: green; border-radius: 5px; color: white ;"></span>
+</form>	
+</div>
+</section>
+<script type="text/javascript">
+	function validations(){
+		// fname starts
+		 var fname=document.getElementById('fname').value;
+		 	 if(fname==""){
+		 	document.getElementById('efname').innerHTML="***please fill the field ";
+		 	return false;
+}
+
+ 	 if(fname.length<=2){
+		 	document.getElementById('efname').innerHTML="***username is too short ";
+		 	return false;
+
+		 }
+		  if(fname.length>20){
+		 	document.getElementById('efname').innerHTML="***username is too long";
+		 	return false;
+
+		 }
+		   if(!isNaN('user')){
+		 	document.getElementById('efname').innerHTML="***characters only";
+		 	return false;
+
+		 }
+        // lname starts
+		 var lname=document.getElementById('lname').value;
+		  if(lname==""){
+		 	document.getElementById('elname').innerHTML="***please fill the field ";
+		 	return false;
+
+		 }
+		  if(lname.length<=2){
+		 	document.getElementById('elname').innerHTML="***last neme is too short ";
+		 	return false;
+
+		 }
+		   if(lname.length>20){
+		 	document.getElementById('elname').innerHTML="***last neme is too long ";
+		 	return false;
+
+		 }
+
+		 var phone=document.getElementById('phone').value;
+		    if(phone==""){
+		 	document.getElementById('ephone').innerHTML="***please fill this field ";
+		 	return false;
+
+		 }
+		 if(phone.length!=10){
+		 	document.getElementById('ephone').innerHTML="***enter 10 digits";
+		 	return false;
+
+		 }
+		  if(isNaN(phone)){
+		 	document.getElementById('ephone').innerHTML="***only digits are allowed";
+		 	return false;
+
+		 }
+		  var email=document.getElementById('email').value;
+		   if(email==""){
+		 	document.getElementById('eemail').innerHTML="***please fill this field";
+		 	return false;
+
+		 }
+
+		 // var email=document.getElementById('email').value;
+		   if(email.indexOf('@')<=0){
+		 	document.getElementById('eemail').innerHTML="***@ invalid position";
+
+		 }
+		    if((email.charAt(email.length-4)!='.')&&(email.charAt(email.length-3)!='.')){
+		 	document.getElementById('eemail').innerHTML="*** . invalid postion";
+		 	return false;
+
+		 }
+		 var password=document.getElementById('password').value;
+		     if(password==""){
+		     	document.getElementById('epassword').innerHTML="***please fill the field";
+		   		 	return false;
+
+		 }
+		 	  if(password.length<=5){
+		 	document.getElementById('epassword').innerHTML="*** weak password";
+		 	return false;
+
+		 } 	  if(password.length>20){
+		 	document.getElementById('epassword').innerHTML="***password is too long";
+		 	return false;
+
+		 }
+
+
+		 var conformpassword=document.getElementById('conformpassword').value;
+		 	     if(conformpassword==""){
+		     	document.getElementById('econformpassword').innerHTML="***please fill the field";
+		   		 	return false;
+
+		 }
+		   if(conformpassword!=password){
+		     	document.getElementById('econformpassword').innerHTML="***passwords are not matching ";
+		   		 	return false;
+}
+else{
+	alert("registered");
+	return true;
+	}
+			
+		}	
+	</script>
+	</body>
+	</html>

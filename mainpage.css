@@ -1,0 +1,202 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+header{
+	height: 100vh;
+	width: 100% ;
+	background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.1)),url('mumbai.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+		animation-name: changes;
+	animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+nav{
+	width: 100%;
+	height: 15vh;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: flex;
+}
+.cdiv{
+	width: 30%;
+}
+.logo{
+	width: 30%;
+	text-align: center;
+	justify-content: center;
+	line-height: 15vh;
+	text-transform: uppercase;
+	color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 25px;
+}
+.menu{
+	width: 40%;
+	float: right;
+	font-size: 25px;
+
+}
+.menu a{
+		justify-content: space-around;
+	  text-decoration: none;
+	  line-height: 15vh;
+	  margin-left: 20px;
+	  /*border: 1px solid white;*/
+	  text-transform: uppercase;
+	  font-weight: bold;
+	  color: white;
+	      text-shadow: 1px 2px 2px black;
+}
+@font-face {
+	font-family: chines;
+	src: url('karate.ttf')
+}
+#chines{
+		font-family: chines;
+
+}
+.menu a:hover{
+	border: 1px solid white;
+	padding: 4px;
+	border-radius: 7px;
+	border-width: 1px;
+	/*background-color: ;*/
+		background-color: rgba(0, 0, 0, 0.3);
+	color: black;
+
+}
+main{
+	height: 60vh;
+	 /*background-color: green;*/
+	display: flex;
+	transform: translatey(30px);
+	justify-content: center;
+	align-items: center;
+	 text-align: center;
+	color: white;
+		      text-shadow: 1px 1px 2px black;
+
+}
+main h3{
+font-size: 35px;
+text-transform: uppercase;
+	color: red;
+}
+main h1{
+	font-size: 55px;
+	color:white;
+
+}
+main p{
+	font-size: 20px;
+    text-transform: uppercase;
+	color:red;
+	font-weight: bold;
+}
+
+
+
+.changethetext:after{
+  content: "";
+  text-shadow: 1px 1px 2px black;
+  color: yellow;
+  font-size: 55px;
+  font-weight: 900;
+  animation-name: change;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  text-transform: uppercase;
+
+}
+@keyframes change{
+  0%{content: "mumbai";}
+  /*5%{content: "mumbai";}*/
+  25%{content: "raigad";}
+  40%{content: "mahabaleshwar";}
+  55%{content: "kambar talav";}
+  70%{content: "lonavala";}
+  85%{content: "siddheshwar temple";}
+  100%{content: "chhatrapati shivaji terminus";}
+ 
+
+}
+
+/*footer*/
+footer{
+	height: 5vh;
+		background-color: rgba(0, 0, 0, 0.5);
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: white;
+		padding-top: 8px;
+		font-size: 20px;
+}
+
+
+
+.imagetwo img{
+ width: 100px;
+ height: 100px;
+ /*float: right;*/
+}
+.imagetwo{
+	height: 20vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translatey(-70px);
+	padding: 5px;
+	transition-property: width,height;
+	transition-duration: 3s;
+	/*transition-delay: 4s;*/
+	transition-timing-function: linear;
+
+}
+
+.imagetwo div{
+
+
+
+}
+
+.imagetwo img:hover{
+	width: 150px;
+ height: 150px;
+
+	/*transform: scale(1.5,1.5);*/
+
+} 
+
+@keyframes changes{
+	background-size:100%;
+	  0%{
+	  	background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.1)),url('mumbai.jpg');
+	  }	 
+	    25%{
+	  	background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.1)), url('raigad1.jpg');
+	  }
+  
+	  40%{
+	  	background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.1)), url('mahabaleshwar.jpg');
+	  }
+  55%{
+	  	background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.1)), url('kambar.jpg');
+	  }
+	   70%{
+	  	background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.1)), url('lonavala.jpg');
+	  }
+   85%{
+	  	background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.1)), url('sid.jpg');
+	  }
+  100%{
+	  	background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.1)), url('terminus.jpeg');
+	  } 
+}
